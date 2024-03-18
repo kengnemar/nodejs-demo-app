@@ -6,7 +6,7 @@ pipeline {
 			    git branch: 'main', url: 'https://github.com/kengnemar/nodejs-demo-app'
 			}
 		}
-        stage('Package the node code') { 
+        stage('Install the node dependencies') { 
             steps {
                 sh 'npm install' 
             }
