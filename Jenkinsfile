@@ -13,7 +13,7 @@ pipeline {
         }
          stage('Test the node code') { 
             steps {
-                sh './jenkins/scripts/test.sh' 
+                sh './scripts/test.sh' 
             }
         }
         stage('Package the node code') { 
