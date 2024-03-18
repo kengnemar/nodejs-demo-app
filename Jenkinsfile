@@ -13,6 +13,7 @@ pipeline {
         }
          stage('Test the node code') { 
             steps {
+                sh 'sudo chmod +x /scripts/test.sh'
                 sh './scripts/test.sh' 
             }
         }
