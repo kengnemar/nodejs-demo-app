@@ -20,7 +20,6 @@ jobs:
         uses: actions/setup-node@v1.4.2
         with:
           node-version: 12
-          cache: 'npm'
       - name: node build 
         run: npm ci
       - name: Nodejs Build
