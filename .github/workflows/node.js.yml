@@ -32,7 +32,8 @@ jobs:
       - name: npm log in
         run: npm config set registry=${{secrets.REGISTRY_URL}}
       - name: npm login
-        run: npm login username:${{secrets.NEXUS_USERNAME}} password:${{secrets.NEXUS_PASSWORD}}
+        # run: npm login -u ${{secrets.NEXUS_USERNAME}} -p ${{secrets.NEXUS_PASSWORD}}
+        run: echo "//${{secrets.REGISTRY_URL}}/:_auth=${{secrets.NEXUS_USERNAME}}:${{secrets.NEXUS_PASSWORD}}" > ~/.npmrc
 
       - name: Publish
         run: npm publish
