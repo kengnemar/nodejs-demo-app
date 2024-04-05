@@ -25,7 +25,7 @@ jobs:
         run: echo "npm config set registry=http://34.207.144.72:8081/repository/npm-hosted-repo/"
       - name: Authenticate to Nexus Repo
           # run: npm login -u ${{secrets.NEXUS_USERNAME}} -p ${{secrets.NEXUS_PASSWORD}}
-        run: echo "//http://34.207.144.72:8081/repository/npm-hosted-repo/:_auth=npm-user:password" > ~/.npmrc
+        run: echo "//http://34.207.144.72:8081/repository/npm-hosted-repo/:_auth=admin:password" > ~/.npmrc
       - name: Install Dependencies
         run: npm install 
       - name: nodejs clean install
