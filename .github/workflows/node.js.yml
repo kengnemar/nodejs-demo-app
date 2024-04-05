@@ -35,7 +35,7 @@ jobs:
         # run: npm login -u ${{secrets.NEXUS_USERNAME}} -p ${{secrets.NEXUS_PASSWORD}}
         run: echo "//http://34.207.144.72:8081/repository/npm-hosted-repo/:_auth=npm-user:password" > ~/.npmrc
       - name: Bump versions
-        run: npm version patch --force
+        run: npm version minor
       - name: Publish to nexus repository
         run: echo "npm publish --registry=http://34.207.144.72:8081/repository/npm-hosted-repo/"
         env:
