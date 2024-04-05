@@ -1,8 +1,31 @@
 {
+  "name": "nodejs-app",
+  "version": "1.0.2",
+  "description": "A nodejs app for form validator.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "example",
+    "package.json"
+  ],
+  "author": "KEMA",
+  "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.3",
-    "express-validator": "^7.0.1"
+    "express-validator": "^7.0.1",
+    "semver": "^7.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
