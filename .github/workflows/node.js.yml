@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          registy-url: ${{secrets.REGISTRY_URL}}
+          registry-url: http://34.207.144.72:8081/repository/npm-hosted-repo/
       - name: Install Dependencies
         run: npm install 
       - name: nodejs clean install
