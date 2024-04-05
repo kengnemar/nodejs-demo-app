@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '20.x'
           registy-url: ${{secrets.REGISTRY_URL}}
-      - name: nodejs install
+      - name: Install Dependencies
         run: npm install 
       - name: nodejs clean install
         run: npm clean-install
@@ -34,7 +34,8 @@ jobs:
       - name: Authenticate to Nexus Repo
         # run: npm login -u ${{secrets.NEXUS_USERNAME}} -p ${{secrets.NEXUS_PASSWORD}}
         run: echo "//http://34.207.144.72:8081/repository/npm-hosted-repo/:_auth=npm-user:password" > ~/.npmrc
-
+      - name: Bump versions
+        run: npm version minor --force
       - name: Publish to nexus repository
         run: echo "npm publish --registry=http://34.207.144.72:8081/repository/npm-hosted-repo/"
         env:
