@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: '20.x'
           registy-url: ${{secrets.REGISTRY_URL}}
+      - name: nodejs install
+        run: npm install 
       - name: nodejs clean install
         run: npm clean-install
       - name: Nodejs Build
