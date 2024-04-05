@@ -37,7 +37,7 @@ jobs:
       - name: clean caches
         run: npm cache clean --force
       - name: Bump versions
-        run: npm version patch
+        run: npm version patch --force
       - name: Publish to nexus repository
         run: echo "npm publish --registry=http://34.207.144.72:8081/repository/npm-hosted-repo/"
         env:
