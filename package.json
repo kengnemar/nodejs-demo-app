@@ -25,6 +25,13 @@
     "express-validator": "^7.0.1",
     "semver": "^7.6.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kengnemar/nodejs-demo-app.git"
+  },
+  "publishConfig": {
+    "registry": "http://34.207.144.72:8081/repository/npm-hosted-repo/"
+  },
   "devDependencies": {
     "nodemon": "^2.0.13"
   }
