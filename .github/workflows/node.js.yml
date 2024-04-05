@@ -29,6 +29,11 @@ jobs:
         run: npm run build --if-present
       # - name: Nodejs test
       #   run: npm test
+      - name: npm log in
+        run: npm config set registry=${{secrets.REGISTRY_URL}}
+      - name: npm login
+        run: npm login username:${{secrets.NEXUS_USERNAME}} password:${{secrets.NEXUS_PASSWORD}}
+
       - name: Publish
         run: npm publish
         env:
